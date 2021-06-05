@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ScoreView: View {
-
+    
     var score: Int
     var totalQuestions: Int
-
+    
     var body: some View {
-        VStack {
-            Text("You got")
-            Text("\(score)/\(totalQuestions)")
+        ZStack {
+            Color(UIColor(red: 1.00, green: 0.81, blue: 0.31, alpha: 1.00)) // #fecf50
+                .ignoresSafeArea()
+            VStack {
+                if score > totalQuestions/2 {
+                    Text("Congrats! You got")
+                        .font(.system(size: 36))
+                        .multilineTextAlignment(.center)
+                } else {
+                    Text("Oh no! You got")
+                        .font(.system(size: 36))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                }
+                
+                Text("\(score)/\(totalQuestions)")
+                    .font(.system(size: 48))
+                    .multilineTextAlignment(.center)
+                    .padding()
+            }
         }
     }
 }

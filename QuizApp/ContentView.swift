@@ -178,9 +178,9 @@ struct ContentView: View {
                 VStack {
                     Text("A Random Quiz")
                         .font(.system(size: 36))
+                        .bold()
                         .multilineTextAlignment(.center)
                         .padding()
-                        .bold()
                     
                     Button(action: {
                         withAnimation(.easeInOut(duration: 0.2)) {

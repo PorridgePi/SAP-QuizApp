@@ -147,16 +147,8 @@ struct ContentView: View {
                             }
                         }
                     }
-                    
-                    HStack {
-                        VStack {
-                            
-                        }
-                        
-                        VStack {
-                            
-                        }
-                    }
+                    .padding()
+                    ProgressView(value: Double(currentQuestion), total: Double(questions.count))
                     .padding()
                 }
                 .frame(width: 400)
@@ -188,6 +180,7 @@ struct ContentView: View {
                         .font(.system(size: 36))
                         .multilineTextAlignment(.center)
                         .padding()
+                        .bold()
                     
                     Button(action: {
                         withAnimation(.easeInOut(duration: 0.2)) {
@@ -230,15 +223,19 @@ struct ContentView: View {
                 if optionNumber==1{
                     Image(systemName: "square.fill")
                         .padding(.leading)
+                        .foregroundColor(.white)
                 }else if optionNumber==2{
                     Image(systemName: "triangle.fill")
                         .padding(.leading)
+                        .foregroundColor(.white)
                 }else if optionNumber==3{
                     Image(systemName: "circle.fill")
                         .padding(.leading)
+                        .foregroundColor(.white)
                 }else if optionNumber==4{
                     Image(systemName: "diamond.fill")
                         .padding(.leading)
+                        .foregroundColor(.white)
                 }
                 Text(option)
                     .lineLimit(2)

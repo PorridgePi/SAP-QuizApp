@@ -220,31 +220,27 @@ struct ContentView: View {
             }) {
                 if optionNumber == 1 {
                     Image(systemName: "square.fill")
-                        .padding(.leading)
-                        .foregroundColor(.white)
                 } else if optionNumber == 2 {
                     Image(systemName: "triangle.fill")
-                        .padding(.leading)
-                        .foregroundColor(.white)
                 } else if optionNumber == 3 {
                     Image(systemName: "circle.fill")
-                        .padding(.leading)
-                        .foregroundColor(.white)
                 } else if optionNumber == 4 {
                     Image(systemName: "diamond.fill")
-                        .padding(.leading)
-                        .foregroundColor(.white)
                 }
+                
                 Text(option)
                     .lineLimit(2)
                     .minimumScaleFactor(0.4)
                     .multilineTextAlignment(.center)
-                    .frame(width: 125, height: 40)
-                    .foregroundColor(Color.white)
+                    .frame(width: 120, height: 40)
             }
-            .padding(.all)
+            .padding()
             .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
+            .foregroundColor(Color.white)
             .cornerRadius(10)
+            .padding(.bottom)
+            .padding(.leading, 5)
+            .padding(.trailing, 5)
     }
 }
 

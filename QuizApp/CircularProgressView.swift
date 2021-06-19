@@ -61,6 +61,7 @@ struct CircularProgressView: View {
                     .rotationEffect(Angle(degrees: 270))
             }
         }
+        .padding()
     }
 }
 

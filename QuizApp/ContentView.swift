@@ -10,47 +10,61 @@ import SwiftUI
 struct ContentView: View {
     
     var questions = [Question(title: "What day is it?",
-                              option1: "Monday",
-                              option2: "Saturday",
-                              option3: "Wednesday",
-                              option4: "Friday",
-                              correctOption: 2),
+                              options: [
+                                "Monday",
+                                "Friday",
+                                "Wednesday",
+                                "Saturday"
+                              ],
+                              correctOption: 4),
                      Question(title: "What framework are we using?",
-                              option1: "UIKit",
-                              option2: "SwiftUI",
-                              option3: "React Native",
-                              option4: "Flutter",
-                              correctOption: 2),
+                              options: [
+                                "UIKit",
+                                "React Native",
+                                "SwiftUI",
+                                "Flutter"
+                              ],
+                              correctOption: 3),
                      Question(title: "Which company created Swift?",
-                              option1: "Google",
-                              option2: "Apple",
-                              option3: "Pear",
-                              option4: "Tinkercademy",
-                              correctOption: 2),
+                              options: [
+                                "Apple",
+                                "Google",
+                                "Pear",
+                                "Tinkercademy"
+                              ],
+                              correctOption: 1),
                      Question(title: "When is the end of the world?",
-                              option1: "Tomorrow",
-                              option2: "You wouldn't live to see it",
-                              option3: "I don't care",
-                              option4: "The world is immortal",
-                              correctOption: 2),
+                              options: [
+                                "Tomorrow",
+                                "I don't care",
+                                "The world is immortal",
+                                "You wouldn't live to see it",
+                              ],
+                              correctOption: 4),
                      Question(title: "Never?",
-                              option1: "Gonna",
-                              option2: "Give",
-                              option3: "You",
-                              option4: "Up",
+                              options: [
+                                "Gonna",
+                                "Give",
+                                "You",
+                                "Up"
+                              ],
                               correctOption: 2),
                      Question(title: "What is the best version of Never Gonna Give You Up?",
-                              option1: "The Original",
-                              option2: "Earrape",
-                              option3: "Silence",
-                              option4: "Remixed",
-                              correctOption: 2),
+                              options: [
+                                "The Original",
+                                "Silence",
+                                "Earrape",
+                                "Remixed"
+                              ],
+                              correctOption: 3),
                      Question(title: "How much money do you have on you?",
-                              option1: "Why you asking me?",
-                              option2: "I'm broke",
-                              option3: "Ya need cash bro?",
-                              option4: "$10",
-                              correctOption: 2)]
+                              options: [
+                                "I'm broke",
+                                "Why you asking me?",
+                                "Ya need cash bro?",
+                                "$10"
+                              ],
+                              correctOption: 1)]
     
     @State var currentQuestion = 0
     
@@ -121,15 +135,15 @@ struct ContentView: View {
                     VStack {
                         HStack {
                             if showButtons {
-                                optionButton(option: questions[currentQuestion].option1, optionNumber: 1)
-                                optionButton(option: questions[currentQuestion].option2, optionNumber: 2)
+                                optionButton(option: questions[currentQuestion].options[0], optionNumber: 1)
+                                optionButton(option: questions[currentQuestion].options[1], optionNumber: 2)
                             }
                         }
                         
                         HStack {
                             if showButtons {
-                                optionButton(option: questions[currentQuestion].option3, optionNumber: 3)
-                                optionButton(option: questions[currentQuestion].option4, optionNumber: 4)
+                                optionButton(option: questions[currentQuestion].options[2], optionNumber: 3)
+                                optionButton(option: questions[currentQuestion].options[3], optionNumber: 4)
                             }
                         }
                     }

@@ -13,37 +13,44 @@ struct ContentView: View {
                               option1: "Monday",
                               option2: "Saturday",
                               option3: "Wednesday",
-                              option4: "Friday"),
+                              option4: "Friday",
+                              correctOption: 2),
                      Question(title: "What framework are we using?",
                               option1: "UIKit",
                               option2: "SwiftUI",
                               option3: "React Native",
-                              option4: "Flutter"),
+                              option4: "Flutter",
+                              correctOption: 2),
                      Question(title: "Which company created Swift?",
                               option1: "Google",
                               option2: "Apple",
                               option3: "Pear",
-                              option4: "Tinkercademy"),
+                              option4: "Tinkercademy",
+                              correctOption: 2),
                      Question(title: "When is the end of the world?",
                               option1: "Tomorrow",
                               option2: "You wouldn't live to see it",
                               option3: "I don't care",
-                              option4: "The world is immortal"),
+                              option4: "The world is immortal",
+                              correctOption: 2),
                      Question(title: "Never?",
                               option1: "Gonna",
                               option2: "Give",
                               option3: "You",
-                              option4: "Up"),
+                              option4: "Up",
+                              correctOption: 2),
                      Question(title: "What is the best version of Never Gonna Give You Up?",
                               option1: "The Original",
                               option2: "Earrape",
                               option3: "Silence",
-                              option4: "Remixed"),
+                              option4: "Remixed",
+                              correctOption: 2),
                      Question(title: "How much money do you have on you?",
                               option1: "Why you asking me?",
                               option2: "I'm broke",
                               option3: "Ya need cash bro?",
-                              option4: "$10")]
+                              option4: "$10",
+                              correctOption: 2)]
     
     @State var currentQuestion = 0
     
@@ -188,7 +195,7 @@ struct ContentView: View {
     }
     
     func didTapOption(optionNumber: Int) {
-        if optionNumber == 2 {
+        if optionNumber == questions[currentQuestion].correctOption {
             print("Correct")
             isCorrect = true
             correctAnswers += 1

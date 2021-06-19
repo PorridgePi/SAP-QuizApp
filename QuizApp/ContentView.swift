@@ -247,9 +247,9 @@ struct ContentView: View {
                     .frame(width: 125, height: 40)
                     .foregroundColor(Color.white)
                 }
-                .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
-                .cornerRadius(10)
-                .padding(.all)
+                    .padding(.all)
+                    .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
+                    .cornerRadius(10)
     }
 }
 

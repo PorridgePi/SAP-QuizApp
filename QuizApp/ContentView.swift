@@ -149,7 +149,7 @@ struct ContentView: View {
                     }
                     .padding()
                     ProgressView(value: Double(currentQuestion), total: Double(questions.count))
-                    .padding()
+                        .padding()
                 }
                 .frame(width: 400)
                 .alert(isPresented: $isAlertPresented) {
@@ -212,27 +212,25 @@ struct ContentView: View {
         }
         isAlertPresented = true
     }
-    // questions[currentQuestion].option4
+    
     fileprivate func optionButton(option: String, optionNumber: Int) -> some View {
-        return Button(
-                    action: {
-                        didTapOption(optionNumber: optionNumber)
-                    }
-                )
-                {
-                if optionNumber==1{
+        return
+            Button(action: {
+                didTapOption(optionNumber: optionNumber)
+            }) {
+                if optionNumber == 1 {
                     Image(systemName: "square.fill")
                         .padding(.leading)
                         .foregroundColor(.white)
-                }else if optionNumber==2{
+                } else if optionNumber == 2 {
                     Image(systemName: "triangle.fill")
                         .padding(.leading)
                         .foregroundColor(.white)
-                }else if optionNumber==3{
+                } else if optionNumber == 3 {
                     Image(systemName: "circle.fill")
                         .padding(.leading)
                         .foregroundColor(.white)
-                }else if optionNumber==4{
+                } else if optionNumber == 4 {
                     Image(systemName: "diamond.fill")
                         .padding(.leading)
                         .foregroundColor(.white)
@@ -243,10 +241,10 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: 125, height: 40)
                     .foregroundColor(Color.white)
-                }
-                    .padding(.all)
-                    .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
-                    .cornerRadius(10)
+            }
+            .padding(.all)
+            .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
+            .cornerRadius(10)
     }
 }
 

@@ -9,7 +9,7 @@ import Foundation
 
 struct Question {
     var title: String
-
+    
     var options: Array<String>
     
     var correctOption: Int

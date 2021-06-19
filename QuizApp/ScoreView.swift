@@ -14,7 +14,6 @@ struct ScoreView: View {
     @State var progressSize: CGFloat = 0.1
     @State var progressRotation: Angle = .zero
     @State var progressOpacity: Double = 0
-
     
     var body: some View {
         ZStack {
@@ -33,8 +32,8 @@ struct ScoreView: View {
                             progressRotation = Angle(degrees: 360 * 2)
                             progressOpacity = 1
                         }
-                        
                     }
+                
                 if score > totalQuestions/2 {
                     Text("Congrats! You got")
                         .font(.system(size: 36))

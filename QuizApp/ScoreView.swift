@@ -21,6 +21,7 @@ struct ScoreView: View {
             Color(UIColor(red: 1.00, green: 0.81, blue: 0.31, alpha: 1.00)) // #fecf50
                 .ignoresSafeArea()
             VStack {
+                
                 CircularProgressView(progress: CGFloat(score) / CGFloat(totalQuestions))
                     .frame(width: 150, height: 150)
                     .scaleEffect(progressSize)

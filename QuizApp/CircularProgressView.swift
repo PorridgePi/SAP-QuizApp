@@ -15,7 +15,7 @@ struct CircularProgressView: View {
                 Circle() // Background
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color(UIColor(red: 0.42, green: 0.09, blue: 0.04, alpha: 1.00))) // #6a180a
                 
                 Circle() // Progress
                     .trim(from: 0, to: progress)
@@ -25,13 +25,13 @@ struct CircularProgressView: View {
                                     lineCap: .round,
                                     lineJoin: .round
                                 ))
-                    .foregroundColor(.red)
+                    .foregroundColor(Color(UIColor(red: 0.42, green: 0.09, blue: 0.04, alpha: 1.00))) // #6a180a
                     .rotationEffect(Angle(degrees: 270))
             } else if progress < 0.7 {
                 Circle() // Background
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(Color(UIColor(red: 0.93, green: 0.41, blue: 0.01, alpha: 1.00))) // #ee6802
                 
                 Circle() // Progress
                     .trim(from: 0, to: progress)
@@ -41,13 +41,13 @@ struct CircularProgressView: View {
                                     lineCap: .round,
                                     lineJoin: .round
                                 ))
-                    .foregroundColor(.yellow)
+                    .foregroundColor(Color(UIColor(red: 0.93, green: 0.41, blue: 0.01, alpha: 1.00))) // #ee6802
                     .rotationEffect(Angle(degrees: 270))
             } else {
                 Circle() // Background
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(UIColor(red: 0.00, green: 0.48, blue: 0.47, alpha: 1.00)))
                 
                 Circle() // Progress
                     .trim(from: 0, to: progress)
@@ -57,7 +57,7 @@ struct CircularProgressView: View {
                                     lineCap: .round,
                                     lineJoin: .round
                                 ))
-                    .foregroundColor(.green)
+                    .foregroundColor(Color(UIColor(red: 0.00, green: 0.48, blue: 0.47, alpha: 1.00)))
                     .rotationEffect(Angle(degrees: 270))
             }
         }

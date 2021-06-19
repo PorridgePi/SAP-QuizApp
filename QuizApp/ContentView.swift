@@ -148,8 +148,11 @@ struct ContentView: View {
                         }
                     }
                     .padding()
-                    ProgressView(value: Double(currentQuestion), total: Double(questions.count))
+                    
+                    ProgressView(value: Double(currentQuestion+1), total: Double(questions.count))
+                        .progressViewStyle(LinearProgressViewStyle(tint: Color(UIColor(red: 0.93, green: 0.41, blue: 0.01, alpha: 1.00))))// #ee6802
                         .padding()
+                    
                 }
                 .frame(width: 400)
                 .alert(isPresented: $isAlertPresented) {

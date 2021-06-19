@@ -15,6 +15,7 @@
 		25645C09266B19860029DB6B /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645C08266B19860029DB6B /* QuizAppTests.swift */; };
 		25645C14266B19860029DB6B /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645C13266B19860029DB6B /* QuizAppUITests.swift */; };
 		25645C22266B1C550029DB6B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25645C21266B1C550029DB6B /* Question.swift */; };
+		996A90E9267D9D36009E73CC /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A90E8267D9D36009E73CC /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		25645C13266B19860029DB6B /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		25645C15266B19860029DB6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25645C21266B1C550029DB6B /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		996A90E8267D9D36009E73CC /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				25645BF6266B19820029DB6B /* QuizAppApp.swift */,
 				25645BF8266B19820029DB6B /* ContentView.swift */,
+				996A90E8267D9D36009E73CC /* CircularProgressView.swift */,
 				250110F3266B2034009F9BAF /* ScoreView.swift */,
 				25645C21266B1C550029DB6B /* Question.swift */,
 				25645BFA266B19860029DB6B /* Assets.xcassets */,
@@ -268,6 +271,7 @@
 				25645C22266B1C550029DB6B /* Question.swift in Sources */,
 				250110F4266B2034009F9BAF /* ScoreView.swift in Sources */,
 				25645BF9266B19820029DB6B /* ContentView.swift in Sources */,
+				996A90E9267D9D36009E73CC /* CircularProgressView.swift in Sources */,
 				25645BF7266B19820029DB6B /* QuizAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

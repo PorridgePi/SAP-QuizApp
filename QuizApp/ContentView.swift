@@ -221,21 +221,35 @@ struct ContentView: View {
     }
     // questions[currentQuestion].option4
     fileprivate func optionButton(option: String, optionNumber: Int) -> some View {
-        return
-            Button(action: {
-                didTapOption(optionNumber: optionNumber)
-            }) {
+        return Button(
+                    action: {
+                        didTapOption(optionNumber: optionNumber)
+                    }
+                )
+                {
+                if optionNumber==1{
+                    Image(systemName: "square.fill")
+                        .padding(.leading)
+                }else if optionNumber==2{
+                    Image(systemName: "triangle.fill")
+                        .padding(.leading)
+                }else if optionNumber==3{
+                    Image(systemName: "circle.fill")
+                        .padding(.leading)
+                }else if optionNumber==4{
+                    Image(systemName: "diamond.fill")
+                        .padding(.leading)
+                }
                 Text(option)
                     .lineLimit(2)
                     .minimumScaleFactor(0.4)
                     .multilineTextAlignment(.center)
                     .frame(width: 125, height: 40)
-                    .padding()
-                    .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
                     .foregroundColor(Color.white)
-                    .cornerRadius(10)
-                    .padding()
-            }
+                }
+                .background(Color(UIColor(red: 1.00, green: 0.61, blue: 0.13, alpha: 1.00))) // #ff9b21
+                .cornerRadius(10)
+                .padding(.all)
     }
 }
 
